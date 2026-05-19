@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "npx -y concurrently -n \"backend,frontend\" -c \"magenta,cyan\" \"../backend/.venv/bin/uvicorn main:app --app-dir ../backend --reload --port 8000\" \"vite\"",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview"
