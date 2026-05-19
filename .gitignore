@@ -1,0 +1,18 @@
+# Environment files
+.env
+
+# Python cache and environments
+__pycache__/
+.venv/
+*.pyc
+
+# Node dependencies and build
+node_modules/
+frontend/dist/
+
+# OS specific files
+.DS_Store
+
+# FAISS and serialization files
+*.faiss
+*.pkl
