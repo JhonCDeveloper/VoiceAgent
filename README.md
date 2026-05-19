@@ -4,10 +4,8 @@
 
 Nomad AI is an intelligent, multimodal travel assistant designed to provide international travelers with real-time logistical support, localized destination insights, and interactive voice responses. The primary use case is to act as a hands-free, autonomous travel guide. A user can interact with the agent via standard text chat or voice commands to ask about current weather, search for live travel news, convert currency based on real-time forex rates, or inquire about local customs and itineraries. From start to finish, the user inputs their query, the agent autonomously routes the request to the appropriate external APIs or local vector database, synthesizes a context-aware response, and outputs both a clean markdown response and a synthesized audio stream for hands-free consumption.
 
-# DEPLOYMENT
+- **GitHub Repository:** https://github.com/JhonCDeveloper/VoiceAgent.git
 
-- **Live Application URL:** [Insert Vercel/Railway Link Here]
-- **GitHub Repository:** [Insert Repository Link Here]
 
 # TECH STACK
 
@@ -84,18 +82,19 @@ pip install -r requirements.txt
 ```
 
 4. Install frontend dependencies:
-Open a second terminal window, navigate to the frontend folder, and install the Node modules:
+Open a terminal, navigate to the frontend folder, and install the Node modules:
 ```bash
 cd frontend
 npm install
 ```
 
-5. Run the application (Parallel Execution):
-If you prefer to start both the frontend and backend simultaneously using a single command from the root directory, use:
+5. Run both Frontend and Backend with a Single Command:
+From the `frontend` directory, you can start both the backend FastAPI server and the frontend Vite server simultaneously in parallel with:
 ```bash
-cd backend && source .venv/bin/activate && uvicorn main:app --reload & cd frontend && npm run dev
+npm run dev
 ```
-*(Alternatively, you can run `uvicorn main:app --reload` in the backend terminal and `npm run dev` in the frontend terminal).*
+*(This command uses concurrently to automatically boot Uvicorn on `http://127.0.0.1:8000` using the backend's virtual environment, and Vite on its default local server, logging all outputs in a single, color-coded terminal window).*
+
 
 # VERIFICATION AND TESTING
 
